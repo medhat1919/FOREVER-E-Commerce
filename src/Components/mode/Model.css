@@ -1,55 +1,124 @@
-.main{
+.main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    ;
-    width: 83%;
-    margin: auto;
-   
-    border: 1px solid #ccc;
+    width: 100%;
+    margin: 40px auto;
 }
 
-.main .left{
-    width: 41%;
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column-reverse;
+        margin: 20px auto;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main .left {
+    width: 100%;
+    padding: 60px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-}
-.main .left h1{
-    font-size: 50px;
-    font-weight: bold;
-}
-.main .left .first{
-    font-size: 30px;
-    position: relative;
-}
-.main .left .first:before{
-    content: "";
-    margin-bottom: 6px;
-    margin-right: 2px;
-    display: inline-block;
-    width: 70px;
-    height: 3px;
-    background-color: black;
-   
-}
-.main .left .last{
-    font-size: 30px;
-}
-.main .left .last:after{
-    content: "";
-    margin-bottom: 6px;
-    margin-left: 6px;
-    display: inline-block;
-    width: 70px;
-    height: 3px;
-    background-color: black;
+    gap: 15px;
+    animation: fadeInUp 1s ease-out;
 }
 
-.main .right{
-    width: 50%;
+@media (min-width: 768px) {
+    .main .left {
+        width: 50%;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
 }
 
+.main .left h1 {
+    font-size: clamp(32px, 8vw, 54px);
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.main .left .first {
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main .left .first:before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #414141;
+}
+
+.main .left .last {
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main .left .last:after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #414141;
+}
+
+.main .right {
+    width: 100%;
+    animation: fadeInRight 1.2s ease-out;
+}
+
+@media (min-width: 768px) {
+    .main .right {
+        width: 50%;
+    }
+}
+
+.main .right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.main .right img:hover {
+    transform: scale(1.02);
+}

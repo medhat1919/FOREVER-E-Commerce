@@ -4,47 +4,47 @@ import { assets } from '../../assets/assets'
 
 const Footer = () => {
   return (
-    <div className="footer">
-    <div className=" mt-15 mb-30 flex items-center justify-center flex-col">
-    <div className="text mb-20">
-<h1 className='text-2xl md:text-4xl font-bold text-black mb-5 relative'>Subscribe now and get 30% off</h1>
-<p className='text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p></div>
+    <div className="footer px-4 sm:px-10 lg:px-20">
+      <div className="flex flex-col items-center text-center py-20">
+        <div className="max-w-xl mx-auto">
+          <h1 className='text-2xl md:text-3xl font-semibold text-gray-800 mb-3'>Subscribe now & get 20% off</h1>
+          <p className='text-gray-500 text-sm md:text-base'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
 
-<form className="input ml-10 md:ml-0 ">
-<input type="text" placeholder='enter your email address' required />
-<button >Subscribe</button>
-</form>
-
-</div>
-
-
-
-<div className="end text-center mt-20 mb:ml-20 md:ml-30 mb-30 block md:grid md:grid-cols-3 md:gap-7 ">
-<div className="box col-span-1.5">
-    <img className='w-30 mb-7 md:m-0 mx-auto' src={assets.logo} alt="logo" />
-    <p className='text-gray-400 mt-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ullam aut placeat fugit excepturi, rem dolor non odit expedita quo. Corrupti molestias voluptas laborum minima vel omnis est eligendi. Ad?.</p>
-</div>
-
-<div className="box mt-20 md:ml-60 md:mt-0">
-    <h1 className='text-black font-bold mb-7'>Company</h1>
-    <p className='text-gray-400'>About</p>
-    <p className='text-gray-400'>Blog</p>
-    <p className='text-gray-400'>Contact</p>
-    <p className='text-gray-400'>Careers</p>
-
-</div>
+        <form className="input">
+          <input type="email" placeholder='Enter your email' required />
+          <button type='submit'>SUBSCRIBE</button>
+        </form>
+      </div>
 
 
 
-<div className="box mt-20 md:ml-20 md:mt-0">
-    <h1 className='text-black font-bold mb-7'>Support</h1>
-    <p className='text-gray-400'>About</p>
-    <p className='text-gray-400'>Blog</p>
-    <p className='text-gray-400'>Contact</p>
-    <p className='text-gray-400'>Careers</p>
-    </div>
+      <div className="end grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr] gap-10 sm:gap-14 my-10 text-sm">
+        <div>
+          <img className='w-32 mb-5' src={assets.logo} alt="logo" />
+          <p className='w-full md:w-2/3 text-gray-600 leading-relaxed'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ullam aut placeat fugit excepturi, rem dolor non odit expedita quo.
+          </p>
+        </div>
 
-</div>
+        <div>
+          <p className='text-xl font-medium mb-5'>COMPANY</p>
+          <ul className='flex flex-col gap-1 text-gray-600'>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Delivery</li>
+            <li>Privacy policy</li>
+          </ul>
+        </div>
+
+        <div>
+          <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
+          <ul className='flex flex-col gap-1 text-gray-600'>
+            <li>+1-212-456-7890</li>
+            <li>contact@foreveryou.com</li>
+          </ul>
+        </div>
+      </div>
 
 
 

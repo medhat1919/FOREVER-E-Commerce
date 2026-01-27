@@ -1,34 +1,46 @@
-.input{
+.footer {
+    width: 100%;
+    padding: 0 4% 40px;
+    border-top: 1px solid #eee;
+    margin-top: 80px;
+}
+
+.input {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 500px;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    border-radius: 20px;
+    border-radius: 4px;
+    overflow: hidden;
 }
-.input input{
-    width: 400px;
-    height: 40px;
-    padding: 10px;
-    border-radius: 5px;
+
+.input input {
+    flex: 1;
+    height: 48px;
+    padding: 0 15px;
     outline: none;
+    font-size: 14px;
 }
-.input button{
-    width: 100px;
-    height: 40px;
+
+.input button {
+    width: 120px;
+    height: 48px;
     background-color: black;
     color: white;
     border: none;
-    border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: 500;
 }
- 
- 
-.end .box{
+
+.input button:hover {
+    background-color: #333;
+}
+
+
+.end .box {
     cursor: pointer;
 }
